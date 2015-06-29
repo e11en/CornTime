@@ -1,0 +1,55 @@
+<h1>{{title}}</h1>
+
+{{data.href}}
+
+{{#if data }}
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Size</th>
+        <th>Seeders</th>
+        <th>Leechers</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#each data}}
+    <tr>
+        <td>{{this.title}}</td>
+        <td>{{this.size}}</td>
+        <td>{{this.seed}}</td>
+        <td>{{this.leech}}</td>
+        <td><a href="javascript:watch('{{this.href}}');">Watch</a></td>
+    </tr>
+    {{/each}}
+
+    </tbody>
+</table>
+{{/if}}
+
+
+<div id="movie">
+
+</div>
+
+<script>
+    function watch(url) {
+        $.ajax({
+            url: '/',
+            data: {url: url},
+            type: 'POST',
+            success: function(data) {
+                alert(data);
+                setPlayer(data);
+            }
+        });
+    }
+
+    function setPlayer(path) {
+        var html = '<video id="movie" width="320" height="240" controls>';
+        html += '<source src="'+path+'" type="video/mp4"></video>';
+        $('#movie').html(html);
+    }
+</script>
