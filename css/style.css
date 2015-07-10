@@ -1,0 +1,198 @@
+body {
+    background-color: #282828;
+    color: #fff;
+}
+
+/* TITLE BAR */
+.titlebar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 64px;
+    background-color: #202020;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.titlebar-icon {
+    position: absolute;
+    left: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 16px;
+    -webkit-app-region: no-drag;
+}
+
+.titlebar-text {
+    position: absolute;
+    left: 32px;
+    width: 80%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-family: Arial;
+    font-size: 11pt;
+
+}
+
+.menubar {
+    position: absolute;
+    width: 100%;
+    top: 32px;
+}
+
+.menubar ul {
+    list-style-type: none;
+    float: left;
+    padding-left: 0.5em;
+}
+
+.menubar li {
+    display: inline;
+    margin-right: 40px;
+}
+
+.menubar span {
+    color: #3665b3;
+}
+
+.menubar a {
+    text-decoration: none;
+    color: #dbdbdb;
+}
+
+.menubar a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+/* SYSTEM BUTTONS */
+#systemBtn {
+    position: absolute;
+    right: 10px;
+    margin-top: 3px;
+    -webkit-app-region: no-drag;
+}
+
+#systemBtn button {
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/topbar_sprite.png');
+    background-repeat: no-repeat;
+    height: 20px;
+}
+
+/* MIN BUTTON */
+.minimize-button {
+    width: 26px;
+    background-position: 0px 0px;
+}
+    .minimize-button:hover {
+        background-position: 0px -20px;
+    }
+    .minimize-button:active {
+        background-position: 0px -40px;
+    }
+
+/* MAX BUTTON */
+.maximize-button {
+    width: 26px;
+    background-position: -26px 0px;
+}
+    .maximize-button:hover {
+        background-position: -26px -20px;
+    }
+    .maximize-button:active {
+        background-position: -26px -40px;
+    }
+
+.max-restore-button {
+    width: 26px;
+    background-position: -52px 0px;
+}
+    .max-restore-button:hover {
+        background-position: -52px -20px;
+    }
+    .max-restore-button:active {
+        background-position: -52px -40px;
+    }
+
+/* CLOSE BUTTON */
+.close-button {
+    width: 45px;
+    background-position: -78px 0px;
+}
+    .close-button:hover {
+        background-position: -78px -20px;
+    }
+    .close-button:active {
+        background-position: -78px -40px;
+    }
+
+/* CONTENT */
+#content {
+    margin-top: 64px;
+    padding: 0.5em;
+}
+
+/* MOVIES PAGE */
+.movie {
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+}
+.movie:hover {
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* MOVIE DETAIL PAGE */
+.movie_detail {
+
+}
+
+.movie_banner_wrapper {
+    height: 300px;
+    overflow: hidden;
+    margin: -0.5em;
+}
+
+.movie_banner {
+    margin-top: -50px;
+    width: 100%;
+}
+
+.movie_detail_content {
+    margin-top: -60px;
+}
+
+.movie_detail_content p {
+    margin-left: 160px;
+}
+
+.movie_poster_small {
+    float: left;
+    width: 150px;
+}
+
+.watch_buttons {
+    float: right;
+}
+
+.watch_buttons button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #3665b3;
+}
